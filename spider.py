@@ -423,10 +423,6 @@ class Marionfl(scrapy.Spider):
 
 crawler = CrawlerProcess(settings=dict(
     CONCURRENT_REQUESTS=4,
-    DOWNLOAD_HANDLERS = {
-        "http": "scrapy_impersonate.ImpersonateDownloadHandler",
-        "https": "scrapy_impersonate.ImpersonateDownloadHandler",
-    },
     TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor",
     FEEDS={"sample.json": {"format": "json"}},
     COOKIES_ENABLED=False,
